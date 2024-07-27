@@ -7,7 +7,7 @@ buildscript {
         compileSdkVersion = 33
         targetSdkVersion = 33
 
-        kotlin_version = '1.7.20'
+        kotlin_version = '1.8.10'
         // We use NDK 23 which has both M1 support and is the side-by-side NDK version from AGP.
         ndkVersion = "23.1.7779620"
 
@@ -26,6 +26,11 @@ buildscript {
         classpath 'com.google.gms:google-services:4.3.14'
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
         classpath 'org.mozilla.rust-android-gradle:plugin:0.9.3'
+
+        
+    }
+    configurations {
+        implementation.exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
     }
 }
 
