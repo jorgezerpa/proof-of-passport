@@ -704,18 +704,18 @@ class TouchImageView : androidx.appcompat.widget.AppCompatImageView {
             performLongClick()
         }
 
-        override fun onFling(e1: MotionEvent, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
-            if (fling != null) {
-                //
-                // If a previous fling is still active, it should be cancelled so that two flings
-                // are not run simultaenously.
-                //
-                fling!!.cancelFling()
-            }
-            fling = Fling(velocityX.toInt(), velocityY.toInt())
-            compatPostOnAnimation(fling as TouchImageView.Fling)
-            return super.onFling(e1, e2, velocityX, velocityY)
-        }
+        // override fun onFling(e1: MotionEvent, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
+        //     if (fling != null) {
+        //         //
+        //         // If a previous fling is still active, it should be cancelled so that two flings
+        //         // are not run simultaenously.
+        //         //
+        //         fling!!.cancelFling()
+        //     }
+        //     fling = Fling(velocityX.toInt(), velocityY.toInt())
+        //     compatPostOnAnimation(fling as TouchImageView.Fling)
+        //     return super.onFling(e1, e2, velocityX, velocityY)
+        // }
 
         override fun onDoubleTap(e: MotionEvent): Boolean {
             var consumed = false

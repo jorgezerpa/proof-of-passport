@@ -12,7 +12,7 @@ import { Steps } from "../utils/utils";
 import { mintSBT } from "../utils/transactions";
 import { ethers } from "ethers";
 import * as amplitude from '@amplitude/analytics-react-native';
-import Clipboard from "@react-native-community/clipboard";
+import Clipboard from "@react-native-clipboard/clipboard";
 import { shortenTxHash } from "../../utils/utils";
 import { textColor1 } from "../utils/colors";
 import { Pressable } from "react-native";

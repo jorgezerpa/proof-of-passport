@@ -2,13 +2,21 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    externalNativeBuild {
+        cmake {
+            version "3.22.1"
+        }
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+    compileSdkVersion 34
     defaultConfig {
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         multiDexEnabled = true
-        ndkVersion = "23.1.7779620"
+        ndkVersion = "26.3.11579264"
 
     }
     packagingOptions {
